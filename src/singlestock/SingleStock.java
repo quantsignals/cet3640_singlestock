@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 public class SingleStock {
 
     public static void main(String[] args) {
-    	String start_date="2024-0-01"; 
+    	String start_date="2024-01-01"; 
     	String end_date="2024-12-31";
     	boolean verbose = false;
       RestService restService = new RestService(verbose);
