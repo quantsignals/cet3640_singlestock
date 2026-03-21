@@ -10,14 +10,14 @@ public class SingleStock {
       HttpClient httpClient = new HttpClient();
       String url_string = "https://eodhd.com/api/eod/AAPL.US?api_token=demo&from="+start_date+"&to="+end_date+"&fmt=json";//
 
-	  String json_api = httpClient.get(url_string, verbose);  // enable this to retrieve data from the API
+	  // String json_api = httpClient.get(url_string, verbose);  // enable this to retrieve data from the API
 
 	    // use the below for testing, remove when using the API 
       String json_test = "[{\"date\":\"2025-01-02\",\"open\":248.93,\"high\":249.1,\"low\":241.82,\"close\":243.85,\"adjusted_close\":243.5822,\"volume\":55740700},"
                 + "{\"date\":\"2025-01-03\",\"open\":243.36,\"high\":244.18,\"low\":241.89,\"close\":243.36,\"adjusted_close\":243.0927,\"volume\":40244100},"
                 + "{\"date\":\"2025-01-06\",\"open\":244.31,\"high\":247.33,\"low\":243.2,\"close\":245.0,\"adjusted_close\":244.7309,\"volume\":45045600}]";
     
-      String json = json_test; // json_api;
+      String json = json_test; // change to json_api;
       // Remove brackets from JSON
         if (json.startsWith("[")) json = json.substring(1);
         if (json.endsWith("]")) json = json.substring(0, json.length() - 1);
